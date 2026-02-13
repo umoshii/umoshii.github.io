@@ -13,34 +13,67 @@
     <link rel="stylesheet" href="styles/main.css">
 </head>
 
-<body>
+<body x-data="app()" x-cloak>
     <header class="header">
         <div>
             <p><span class="header__special">&lt;3</span> umoshi</p>
         </div>
         <div>
-            <a href="index.html" class="header__link header__link--selected">home</a>
-            <a href="works.html" class="header__link">works</a>
-            <a href="extra.html" class="header__link">sillies</a>
+            <a href="#" @click.prevent="switchView('home')" class="header__link" :class="{ 'header__link--selected': checkView('home') }">home</a>
+            <a href="#" @click.prevent="switchView('works')" class="header__link" :class="{ 'header__link--selected': checkView('works') }">works</a>
+            <a href="#" @click.prevent="switchView('sillies')" class="header__link" :class="{ 'header__link--selected': checkView('sillies') }">sillies</a>
         </div>
     </header>
 
     <main class="main">
-        <div class="main__container">
-            <div class="logo">
-                <p class="logo__title">umoshi</p>
-                <p class="logo__undertitle">dreams like stars on the night sky</p>
-            </div>
+        <section class="section section-main" x-show="checkView('home')" x-transition>
+            <div class="main__container">
+                <div class="logo">
+                    <p class="logo__title">umoshi</p>
+                    <p class="logo__undertitle">dreams like stars on the night sky</p>
+                </div>
 
-            <div class="links">
-                <a class="link" href="#" target="_blank">bluesky ↗</a>
-                <a class="link" href="https://github.com/umoshii" target="_blank">github ↗</a>
-                <a class="link" href="mailto:tripleumo@gmail.com" target="_blank">email ↗</a>
-            </div>
+                <div class="links">
+                    <a class="link" href="#" target="_blank">bluesky ↗</a>
+                    <a class="link" href="https://github.com/umoshii" target="_blank">github ↗</a>
+                    <a class="link" href="mailto:tripleumo@gmail.com" target="_blank">email ↗</a>
+                </div>
 
-            <p class="links__subtext">( not all links are functional yet )</p>
-        </div>
+                <p class="links__subtext">( not all links are functional yet )</p>
+            </div>
+        </section>
+
+        <section class="section section-works" x-show="checkView('works')" x-transition>
+            <div class="main__container">
+                <div class="works__container">
+                    <div class="work">
+                        <img src="assets/imgs/portfolio.png" alt="portfolio screenshot" class="work__img">
+                        <p class="work__title">portfolio</p>
+                        <p class="work__description">you're looking at it right now!</p>
+                        <a class="work__btn" href="index.html">open ↗</a>
+                    </div>
+
+                    <div class="work">
+                        <img src="assets/imgs/placeholder.png" alt="placeholder" class="work__img">
+                        <p class="work__title">working on new projects</p>
+                        <p class="work__description">soon to come!</p>
+                        <a class="work__btn work__btn--inactive" href="#">open ↗</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section-sillies" x-show="checkView('sillies')" x-transition>
+            <div class="main__container">
+                <img class="extra__image" src="https://i.pinimg.com/736x/a1/cc/e8/a1cce8d2e754e9020167c68df6b778c2.jpg"
+                    alt="bnuy">
+                <p class="extra__text">( periodically updated with random images )</p>
+            </div>
+        </section>
     </main>
+
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script src="app.js"></script>
 </body>
 
 </html>
