@@ -7,6 +7,28 @@ body {
     background-color: rgb(241, 241, 241);
 }
 
+[x-cloak] {
+    display: none !important;
+}
+
+/* structure */
+.main {
+    height: 85vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    position: relative;
+}
+
+.section {
+    position: absolute;
+}
+/* ========= */
+
+/* header */
 .header {
     display: flex;
     justify-content: space-between;
@@ -30,25 +52,16 @@ body {
     margin: 0 5px;
 }
 
+.header__link:hover {
+    border-bottom: 2px solid rgb(191, 191, 191);
+}
+
 .header__link--selected {
-    text-decoration: underline;
+    border-bottom: 2px solid black;
 }
+/* ====== */
 
-.main {
-    height: 85vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    text-align: center;
-
-    position: relative;
-}
-
-.section {
-    position: absolute;
-}
-
+/* home section */
 .logo__title {
     font-size: 6em;
     color: rgb(32, 32, 32);
@@ -74,7 +87,9 @@ body {
     margin-top: 10px;
     color: rgb(184, 184, 184);
 }
+/* ============ */
 
+/* works section */
 .works__container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -117,7 +132,9 @@ body {
 .work__btn--inactive {
     background-color: rgb(90, 90, 90);
 }
+/* ============= */
 
+/* sillies section */
 .extra__image {
     width: 550px;
     height: 350px;
@@ -130,7 +147,9 @@ body {
     color: gray;
     margin-top: 10px;
 }
+/* =============== */
 
+/* media */
 @media (max-width: 810px) {
     body {
         font-size: 16px;
