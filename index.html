@@ -19,15 +19,18 @@
             <p><span class="header__special">&lt;3</span> umoshi</p>
         </div>
         <div>
-            <a href="#" @click.prevent="switchView('home')" class="header__link" :class="{ 'header__link--selected': checkView('home') }">home</a>
-            <a href="#" @click.prevent="switchView('works')" class="header__link" :class="{ 'header__link--selected': checkView('works') }">works</a>
-            <a href="#" @click.prevent="switchView('sillies')" class="header__link" :class="{ 'header__link--selected': checkView('sillies') }">sillies</a>
+            <a href="#" @click.prevent="switchView('home')" class="header__link"
+                :class="{ 'header__link--selected': checkView('home') }">home</a>
+            <a href="#" @click.prevent="switchView('works')" class="header__link"
+                :class="{ 'header__link--selected': checkView('works') }">works</a>
+            <a href="#" @click.prevent="switchView('sillies')" class="header__link"
+                :class="{ 'header__link--selected': checkView('sillies') }">sillies</a>
         </div>
     </header>
 
     <main class="main">
         <section class="section section-main" x-show="checkView('home')" x-transition>
-            <div class="main__container">
+            <div>
                 <div class="logo">
                     <p class="logo__title">umoshi</p>
                     <p class="logo__undertitle">dreams like stars on the night sky</p>
@@ -44,7 +47,7 @@
         </section>
 
         <section class="section section-works" x-show="checkView('works')" x-transition>
-            <div class="main__container">
+            <div>
                 <div class="works__container">
                     <div class="work">
                         <img src="assets/imgs/portfolio.png" alt="portfolio screenshot" class="work__img">
@@ -64,7 +67,7 @@
         </section>
 
         <section class="section section-sillies" x-show="checkView('sillies')" x-transition>
-            <div class="main__container">
+            <div>
                 <img class="extra__image" src="https://i.pinimg.com/736x/a1/cc/e8/a1cce8d2e754e9020167c68df6b778c2.jpg"
                     alt="bnuy">
                 <p class="extra__text">( periodically updated with random images )</p>

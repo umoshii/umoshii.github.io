@@ -41,6 +41,12 @@ body {
     justify-content: center;
 
     text-align: center;
+
+    position: relative;
+}
+
+.section {
+    position: absolute;
 }
 
 .logo__title {
