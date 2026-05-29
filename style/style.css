@@ -2,6 +2,9 @@
 body {
     background: url('../assets/images/website-bg.png') no-repeat center center fixed;
     background-size: cover;
+
+    color: white;
+    font-family: 'Iosevka Regular', 'Courier New', Courier, monospace;
 }
 
 #app {
@@ -18,3 +21,39 @@ body {
     height: 100%;
 }
 /* =================== */
+
+/* header */
+.header {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+
+    width: 45%;
+    height: 90px;
+
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.489), rgba(0, 0, 0, 0)), 
+    url('../assets/images/header-bg.png');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+    outline: 2px solid rgb(117, 117, 117);
+    padding: 10px;
+}
+
+.header__info {
+    align-content: center;
+}
+
+.header__name {
+    margin-bottom: -6px;
+    font-size: 1.5em;
+}
+
+.header__desc {
+    font-size: 0.9em;
+    color:rgba(255, 255, 255, 0.688);
+    text-decoration: underline dashed;
+    cursor: pointer;
+}
+/* ====== */

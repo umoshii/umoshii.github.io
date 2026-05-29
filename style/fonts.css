@@ -1,0 +1,9 @@
+@font-face {
+    font-family: "Iosevka Regular";
+    src: url("../assets/fonts/IosevkaNerdFontPropo-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Iosevka Bold";
+    src: url("../assets/fonts/IosevkaNerdFontPropo-Bold.ttf");
+}
