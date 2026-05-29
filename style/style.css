@@ -14,8 +14,10 @@ body {
 
 .app-container {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+    gap: 10px;
 
     width: 100%;
     height: 100%;
@@ -29,7 +31,7 @@ body {
     gap: 30px;
 
     width: 45%;
-    height: 90px;
+    height: 85px;
 
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0.489), rgba(0, 0, 0, 0)), 
     url('../assets/images/header-bg.png');
@@ -37,7 +39,7 @@ body {
     background-position: center center;
     background-repeat: no-repeat;
 
-    outline: 2px solid rgb(117, 117, 117);
+    outline: 2px solid rgb(142, 142, 142);
     padding: 10px;
 }
 
@@ -57,3 +59,53 @@ body {
     cursor: pointer;
 }
 /* ====== */
+
+/* quick-cards */
+.quick-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    width: 45%;
+}
+
+.quick-cards div {
+    height: 85px;
+    background-color: rgba(0, 0, 0, 0.448);
+    outline: 2px solid rgb(142, 142, 142);
+
+    align-content: center;
+    padding: 0 16px 0 16px;
+
+    font-size: 0.85em;
+}
+
+.quick-cards__icon {
+    margin-right: 4px;
+}
+
+.quick-cards__devices {
+    grid-column: span 2;
+}
+
+.quick-cards__collabs__status {
+    font-size: 1.5em;
+    max-width: 100px;
+    line-height: 18px;
+    color: rgb(196, 255, 196);
+    margin-bottom: 6px;
+}
+
+.quick-cards__time__title {
+    max-width: 100px;
+    line-height: 15px;
+    margin-bottom: 2px;
+}
+
+.quick-cards__time__timezone {
+    color: rgba(255, 255, 255, 0.583);
+}
+
+.quick-cards__time__clock {
+    font-size: 1.5em;
+}
+/* =========== */
