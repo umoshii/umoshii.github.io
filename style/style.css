@@ -5,6 +5,10 @@
 /* ========= */
 
 /* primary app styling */
+html {
+    scrollbar-width: none;
+}
+
 body {
     background: url('../assets/images/website-bg.png') no-repeat center center fixed;
     background-size: cover;
@@ -318,6 +322,13 @@ body {
 
     .badges__img {
         width: 45px;
+    }
+}
+
+@media (height <= 775px) {
+    .app-container {
+        justify-content: start;
+        margin-top: 20px;
     }
 }
 /* =========== */
