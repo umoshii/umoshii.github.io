@@ -1,6 +1,6 @@
 /* variables */
 :root {
-    --block-width: 65%;
+    --block-width: 55%;
 }
 /* ========= */
 
@@ -119,3 +119,27 @@ body {
     font-size: 1.5em;
 }
 /* =========== */
+
+/* info */
+.info {
+    background-color: rgba(0, 0, 0, 0.448);
+    outline: 2px solid rgb(142, 142, 142);
+    width: var(--block-width);
+
+    padding: 16px;
+    font-size: 0.85em;
+}
+
+.info__title {
+    font-weight: bold;
+    margin-bottom: 14px;
+}
+
+.info__table__key {
+    width: 200px;
+}
+
+.info__table__mood-update {
+    color:rgba(255, 255, 255, 0.688);
+}
+/* ==== */
