@@ -174,3 +174,30 @@ body {
     width: 250px;
 }
 /* ==== */
+
+/* badges */
+.badges {
+    background-color: rgba(0, 0, 0, 0.448);
+    outline: 2px solid rgb(142, 142, 142);
+    width: var(--block-width);
+
+    padding: 10px;
+    font-size: 0.85em;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+}
+
+.badges__img {
+    width: 85px;
+
+    transition: all 0.2s ease-out;
+}
+
+.badges__img:hover {
+    transform: scale(120%);
+}
+/* ====== */
