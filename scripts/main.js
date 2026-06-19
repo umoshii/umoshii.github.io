@@ -10,6 +10,12 @@ function app() {
             "puppy"
         ],
 
+        localTime: "",
+
+        getUTC3Time() {
+            return new Date().toLocaleString('en-GB', { timeZone: 'Etc/GMT-3', hour: '2-digit', minute: '2-digit', hour12: false });
+        },
+
         selectHeaderDescription() {
             let pick = "";
 
@@ -21,7 +27,7 @@ function app() {
         },
 
         init() {
-            console.log("meow");
+            this.localTime = this.getUTC3Time();
             this.selectHeaderDescription();
         }
     };
