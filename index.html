@@ -14,13 +14,13 @@
 </head>
 
 <body>
-    <div id="app">
+    <div id="app" x-data="app()">
         <div class="app-container">
             <header class="header">
                 <img src="assets/images/header-pfp.jpeg" alt="Profile Picture">
                 <div class="header__info">
                     <p class="header__name">umoshi</p>
-                    <p class="header__desc">web developer</p>
+                    <p class="header__desc" x-text="headerDescription" @click="selectHeaderDescription()">web developer</p>
                 </div>
             </header>
             

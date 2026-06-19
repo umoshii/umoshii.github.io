@@ -69,6 +69,10 @@ body {
     color:rgba(255, 255, 255, 0.688);
     text-decoration: underline dashed;
     cursor: pointer;
+
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 /* ====== */
 
